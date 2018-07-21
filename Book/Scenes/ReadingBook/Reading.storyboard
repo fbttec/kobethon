@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="fK6-id-ZAZ">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Reading View Controller-->
+        <scene sceneID="GTA-kg-Fgd">
+            <objects>
+                <viewController id="fK6-id-ZAZ" customClass="ReadingViewController" customModule="Book" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="pDo-AJ-kgE">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00:00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Iwr-iQ-wCc">
+                                <rect key="frame" x="146" y="325.5" width="82.5" height="36"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1" minValue="0.0" maxValue="60" translatesAutoresizingMaskIntoConstraints="NO" id="jTa-UH-lqF">
+                                <rect key="frame" x="14" y="394.5" width="347" height="31"/>
+                                <connections>
+                                    <action selector="changeTimerValue:" destination="fK6-id-ZAZ" eventType="valueChanged" id="1QC-Xd-IuM"/>
+                                </connections>
+                            </slider>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6e7-5j-gcK">
+                                <rect key="frame" x="170" y="456" width="34" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Start"/>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Você quer ler por quanto tempo?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pwy-aD-dYz">
+                                <rect key="frame" x="61.5" y="242" width="251" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="vWZ-UK-yeN" firstAttribute="trailing" secondItem="jTa-UH-lqF" secondAttribute="trailing" constant="16" id="NyB-5C-d5V"/>
+                            <constraint firstItem="Iwr-iQ-wCc" firstAttribute="centerX" secondItem="vWZ-UK-yeN" secondAttribute="centerX" id="O9z-dZ-otj"/>
+                            <constraint firstItem="Pwy-aD-dYz" firstAttribute="centerX" secondItem="Iwr-iQ-wCc" secondAttribute="centerX" id="edj-iA-iDO"/>
+                            <constraint firstItem="jTa-UH-lqF" firstAttribute="leading" secondItem="vWZ-UK-yeN" secondAttribute="leading" constant="16" id="jSQ-7B-bqa"/>
+                            <constraint firstItem="Iwr-iQ-wCc" firstAttribute="centerY" secondItem="vWZ-UK-yeN" secondAttribute="centerY" id="mKI-PG-BFa"/>
+                            <constraint firstItem="jTa-UH-lqF" firstAttribute="top" secondItem="Iwr-iQ-wCc" secondAttribute="bottom" constant="33" id="uLA-8h-u8w"/>
+                            <constraint firstItem="Iwr-iQ-wCc" firstAttribute="top" secondItem="Pwy-aD-dYz" secondAttribute="bottom" constant="62.5" id="w4d-S1-Hps"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="vWZ-UK-yeN"/>
+                    </view>
+                    <connections>
+                        <outlet property="slider" destination="jTa-UH-lqF" id="vJn-t1-kTp"/>
+                        <outlet property="startButton" destination="6e7-5j-gcK" id="hXg-8n-P8t"/>
+                        <outlet property="timerLabel" destination="Iwr-iQ-wCc" id="bNS-cz-ssX"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9JO-37-q6k" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-140" y="2.2488755622188905"/>
+        </scene>
+    </scenes>
+</document>
