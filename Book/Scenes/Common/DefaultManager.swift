@@ -12,8 +12,7 @@ struct DefaultManager {
     
     static let booksKey = "kBooks"
     
-    static let defaultManager = DefaultManager()
-    
+    static let shared = DefaultManager()
     
     func setBooks(books: [Book]?) {
         guard let book: [Book] = books else { return }

@@ -17,6 +17,7 @@
 		5B1805832103C34E00F48E6D /* RegisterBookViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B1805822103C34E00F48E6D /* RegisterBookViewController.swift */; };
 		5B1805862103C3BD00F48E6D /* Book.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B1805852103C3BD00F48E6D /* Book.swift */; };
 		5B1805892103C5B500F48E6D /* DefaultManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B1805882103C5B500F48E6D /* DefaultManager.swift */; };
+		5B18058C2103E63600F48E6D /* RegisterBookCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B18058B2103E63600F48E6D /* RegisterBookCollectionViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +45,7 @@
 		5B1805822103C34E00F48E6D /* RegisterBookViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterBookViewController.swift; sourceTree = "<group>"; };
 		5B1805852103C3BD00F48E6D /* Book.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Book.swift; sourceTree = "<group>"; };
 		5B1805882103C5B500F48E6D /* DefaultManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultManager.swift; sourceTree = "<group>"; };
+		5B18058B2103E63600F48E6D /* RegisterBookCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterBookCollectionViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -142,6 +144,7 @@
 		5B18057F2103C2B200F48E6D /* RegisteBook */ = {
 			isa = PBXGroup;
 			children = (
+				5B18058A2103E60700F48E6D /* View */,
 				5B1805802103C2D200F48E6D /* RegisterBook.storyboard */,
 				5B1805822103C34E00F48E6D /* RegisterBookViewController.swift */,
 			);
@@ -162,6 +165,14 @@
 				5B1805882103C5B500F48E6D /* DefaultManager.swift */,
 			);
 			path = Common;
+			sourceTree = "<group>";
+		};
+		5B18058A2103E60700F48E6D /* View */ = {
+			isa = PBXGroup;
+			children = (
+				5B18058B2103E63600F48E6D /* RegisterBookCollectionViewCell.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -266,6 +277,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5B18058C2103E63600F48E6D /* RegisterBookCollectionViewCell.swift in Sources */,
 				5B1805862103C3BD00F48E6D /* Book.swift in Sources */,
 				5B18055B2103B36F00F48E6D /* ViewController.swift in Sources */,
 				5B1805592103B36F00F48E6D /* AppDelegate.swift in Sources */,

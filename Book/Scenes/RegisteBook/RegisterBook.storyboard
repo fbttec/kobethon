@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="SMx-Ya-ICq">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="dWe-7f-R2w">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -17,11 +17,102 @@
                     <view key="view" contentMode="scaleToFill" id="XBp-gX-ajK">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="6a8-wi-XK2">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <color key="backgroundColor" red="0.93725490196078431" green="0.93725490196078431" blue="0.96078431372549022" alpha="1" colorSpace="calibratedRGB"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="0Z1-lC-S5i">
+                                    <size key="itemSize" width="178" height="168"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="5" minY="5" maxX="3" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="RegisterBookCollectionViewCell" id="QFf-a5-H1B" customClass="RegisterBookCollectionViewCell" customModule="Book" customModuleProvider="target">
+                                        <rect key="frame" x="5" y="5" width="178" height="168"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                                            <rect key="frame" x="0.0" y="0.0" width="178" height="168"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Velozes e Furiosos" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ekd-JN-rmX">
+                                                    <rect key="frame" x="7" y="20" width="161" height="12"/>
+                                                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="10"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="5hd-le-fjv">
+                                                    <rect key="frame" x="14" y="153" width="150" height="3"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="3" id="pmn-s0-n5I"/>
+                                                    </constraints>
+                                                </progressView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="50/100" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VnH-FA-88D">
+                                                    <rect key="frame" x="75" y="138" width="28" height="10"/>
+                                                    <fontDescription key="fontDescription" type="system" weight="light" pointSize="8"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </view>
+                                        <constraints>
+                                            <constraint firstAttribute="bottom" secondItem="5hd-le-fjv" secondAttribute="bottom" constant="12" id="29I-CI-8LQ"/>
+                                            <constraint firstItem="5hd-le-fjv" firstAttribute="leading" secondItem="QFf-a5-H1B" secondAttribute="leading" constant="14" id="Lk8-GD-QPS"/>
+                                            <constraint firstAttribute="trailing" secondItem="ekd-JN-rmX" secondAttribute="trailing" constant="10" id="OuA-Pp-dIb"/>
+                                            <constraint firstItem="5hd-le-fjv" firstAttribute="top" secondItem="VnH-FA-88D" secondAttribute="bottom" constant="5" id="Vyj-mJ-E8J"/>
+                                            <constraint firstItem="ekd-JN-rmX" firstAttribute="leading" secondItem="QFf-a5-H1B" secondAttribute="leading" constant="7" id="fmV-Ja-dld"/>
+                                            <constraint firstItem="ekd-JN-rmX" firstAttribute="top" secondItem="QFf-a5-H1B" secondAttribute="top" constant="20" id="je3-Q8-fGC"/>
+                                            <constraint firstAttribute="trailing" secondItem="5hd-le-fjv" secondAttribute="trailing" constant="14" id="jvV-bB-oxl"/>
+                                            <constraint firstItem="VnH-FA-88D" firstAttribute="centerX" secondItem="5hd-le-fjv" secondAttribute="centerX" id="lP8-gQ-hla"/>
+                                        </constraints>
+                                        <connections>
+                                            <outlet property="progressView" destination="5hd-le-fjv" id="4Of-Rs-sB2"/>
+                                            <outlet property="status" destination="VnH-FA-88D" id="Ltq-n9-0fJ"/>
+                                            <outlet property="title" destination="ekd-JN-rmX" id="MXO-uh-QVG"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="6a8-wi-XK2" firstAttribute="leading" secondItem="BaU-lO-A1m" secondAttribute="leading" id="Jxn-9y-o8h"/>
+                            <constraint firstItem="BaU-lO-A1m" firstAttribute="bottom" secondItem="6a8-wi-XK2" secondAttribute="bottom" id="epH-eN-3y5"/>
+                            <constraint firstItem="6a8-wi-XK2" firstAttribute="top" secondItem="BaU-lO-A1m" secondAttribute="top" id="fRe-4n-Hh9"/>
+                            <constraint firstItem="BaU-lO-A1m" firstAttribute="trailing" secondItem="6a8-wi-XK2" secondAttribute="trailing" id="gln-je-Vds"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="BaU-lO-A1m"/>
                     </view>
+                    <navigationItem key="navigationItem" id="cjq-CH-CuQ"/>
+                    <connections>
+                        <outlet property="addBarButtonItem" destination="c9d-fR-0Rl" id="P6p-wu-XcY"/>
+                        <outlet property="collectionView" destination="6a8-wi-XK2" id="fHB-pO-K43"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JrS-JC-qAD" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <barButtonItem systemItem="add" id="c9d-fR-0Rl">
+                    <connections>
+                        <action selector="didTouchAddBook:" destination="SMx-Ya-ICq" id="40K-PM-oE7"/>
+                    </connections>
+                </barButtonItem>
+            </objects>
+            <point key="canvasLocation" x="1112.8" y="151.57421289355324"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="96u-0C-Fwh">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="dWe-7f-R2w" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="xUX-iU-Dg5">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="SMx-Ya-ICq" kind="relationship" relationship="rootViewController" id="9AT-qt-SCP"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="R4J-oS-4Fi" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="173.59999999999999" y="151.57421289355324"/>
         </scene>
