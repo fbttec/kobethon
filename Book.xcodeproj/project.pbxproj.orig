@@ -17,10 +17,13 @@
 		5B1805832103C34E00F48E6D /* RegisterBookViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B1805822103C34E00F48E6D /* RegisterBookViewController.swift */; };
 		5B1805862103C3BD00F48E6D /* Book.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B1805852103C3BD00F48E6D /* Book.swift */; };
 		5B1805892103C5B500F48E6D /* DefaultManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B1805882103C5B500F48E6D /* DefaultManager.swift */; };
+<<<<<<< HEAD
 		CB7D0E1A2103C68100A4AE82 /* Reading.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CB7D0E192103C68100A4AE82 /* Reading.storyboard */; };
 		CB7D0E1C2103C80E00A4AE82 /* ReadingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB7D0E1B2103C80E00A4AE82 /* ReadingViewController.swift */; };
+=======
 		99B8637E2103B6A500AB4275 /* (null) in Sources */ = {isa = PBXBuildFile; };
 		99B863802103E00100AB4275 /* NotificationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99B8637F2103E00100AB4275 /* NotificationManager.swift */; };
+>>>>>>> b04dbd6bc8ff074df637b5b21ffeb54b1f087cef
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,7 +51,12 @@
 		5B1805822103C34E00F48E6D /* RegisterBookViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterBookViewController.swift; sourceTree = "<group>"; };
 		5B1805852103C3BD00F48E6D /* Book.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Book.swift; sourceTree = "<group>"; };
 		5B1805882103C5B500F48E6D /* DefaultManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultManager.swift; sourceTree = "<group>"; };
+<<<<<<< HEAD
+		CB7D0E192103C68100A4AE82 /* Reading.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Reading.storyboard; sourceTree = "<group>"; };
+		CB7D0E1B2103C80E00A4AE82 /* ReadingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReadingViewController.swift; sourceTree = "<group>"; };
+=======
 		99B8637F2103E00100AB4275 /* NotificationManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationManager.swift; sourceTree = "<group>"; };
+>>>>>>> b04dbd6bc8ff074df637b5b21ffeb54b1f087cef
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -171,12 +179,22 @@
 			path = Common;
 			sourceTree = "<group>";
 		};
+<<<<<<< HEAD
+		CB7D0E162103C60100A4AE82 /* ReadingBook */ = {
+			isa = PBXGroup;
+			children = (
+				CB7D0E192103C68100A4AE82 /* Reading.storyboard */,
+				CB7D0E1B2103C80E00A4AE82 /* ReadingViewController.swift */,
+			);
+			path = ReadingBook;
+=======
 		99B8637C2103B69000AB4275 /* Manager */ = {
 			isa = PBXGroup;
 			children = (
 				99B8637F2103E00100AB4275 /* NotificationManager.swift */,
 			);
 			path = Manager;
+>>>>>>> b04dbd6bc8ff074df637b5b21ffeb54b1f087cef
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
