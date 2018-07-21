@@ -27,7 +27,7 @@ class ReadingViewController: UIViewController {
   }
   
   func startTimer() {
-    startButton.setTitle("Cancel", for: .normal)
+    startButton.setTitle(StringKeys.cancel, for: .normal)
     slider.isEnabled = false
     slider.alpha = 0.5
     countdownTimer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(updateTime), userInfo: nil, repeats: true)
@@ -50,7 +50,7 @@ class ReadingViewController: UIViewController {
     slider.alpha = 1.0
     slider.value = 0.0
     timerLabel.text = "\(timeFormatted(totalTime))"
-    startButton.setTitle("Start", for: .normal)
+    startButton.setTitle(StringKeys.start, for: .normal)
   }
   
   func timeFormatted(_ totalSeconds: Int) -> String {
