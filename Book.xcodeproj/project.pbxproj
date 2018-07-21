@@ -23,6 +23,10 @@
 		CB7D0E1C2103C80E00A4AE82 /* (null) in Sources */ = {isa = PBXBuildFile; };
 		CB7D0E262103E1E000A4AE82 /* Reading.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CB7D0E242103E1E000A4AE82 /* Reading.storyboard */; };
 		CB7D0E272103E1E000A4AE82 /* ReadingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB7D0E252103E1E000A4AE82 /* ReadingViewController.swift */; };
+		E930112E2103E4A70045AA95 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = E930112A2103E4A70045AA95 /* Utils.swift */; };
+		E930112F2103E4A70045AA95 /* CircularSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = E930112B2103E4A70045AA95 /* CircularSlider.swift */; };
+		E93011302103E4A70045AA95 /* CircularSlider.xib in Resources */ = {isa = PBXBuildFile; fileRef = E930112C2103E4A70045AA95 /* CircularSlider.xib */; };
+		E93011312103E4A70045AA95 /* RotationGesture.swift in Sources */ = {isa = PBXBuildFile; fileRef = E930112D2103E4A70045AA95 /* RotationGesture.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +57,10 @@
 		99B8637F2103E00100AB4275 /* NotificationManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationManager.swift; sourceTree = "<group>"; };
 		CB7D0E242103E1E000A4AE82 /* Reading.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Reading.storyboard; sourceTree = "<group>"; };
 		CB7D0E252103E1E000A4AE82 /* ReadingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReadingViewController.swift; sourceTree = "<group>"; };
+		E930112A2103E4A70045AA95 /* Utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
+		E930112B2103E4A70045AA95 /* CircularSlider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CircularSlider.swift; sourceTree = "<group>"; };
+		E930112C2103E4A70045AA95 /* CircularSlider.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CircularSlider.xib; sourceTree = "<group>"; };
+		E930112D2103E4A70045AA95 /* RotationGesture.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RotationGesture.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,6 +102,7 @@
 		5B1805572103B36F00F48E6D /* Book */ = {
 			isa = PBXGroup;
 			children = (
+				E93011282103E48F0045AA95 /* Classes */,
 				99B8637C2103B69000AB4275 /* Manager */,
 				5B1805792103B39400F48E6D /* Scenes */,
 				5B1805782103B37D00F48E6D /* Supporting Files */,
@@ -192,6 +201,25 @@
 			name = ReadingBook;
 			sourceTree = "<group>";
 		};
+		E93011282103E48F0045AA95 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				E93011292103E49A0045AA95 /* CircularSlider */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		E93011292103E49A0045AA95 /* CircularSlider */ = {
+			isa = PBXGroup;
+			children = (
+				E930112B2103E4A70045AA95 /* CircularSlider.swift */,
+				E930112C2103E4A70045AA95 /* CircularSlider.xib */,
+				E930112D2103E4A70045AA95 /* RotationGesture.swift */,
+				E930112A2103E4A70045AA95 /* Utils.swift */,
+			);
+			path = CircularSlider;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -278,6 +306,7 @@
 				5B1805602103B37000F48E6D /* Assets.xcassets in Resources */,
 				CB7D0E262103E1E000A4AE82 /* Reading.storyboard in Resources */,
 				5B1805812103C2D200F48E6D /* RegisterBook.storyboard in Resources */,
+				E93011302103E4A70045AA95 /* CircularSlider.xib in Resources */,
 				5B18055E2103B36F00F48E6D /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -296,11 +325,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E930112F2103E4A70045AA95 /* CircularSlider.swift in Sources */,
 				99B8637E2103B6A500AB4275 /* (null) in Sources */,
 				5B1805862103C3BD00F48E6D /* Book.swift in Sources */,
 				5B18055B2103B36F00F48E6D /* ViewController.swift in Sources */,
 				5B1805592103B36F00F48E6D /* AppDelegate.swift in Sources */,
 				99B863802103E00100AB4275 /* NotificationManager.swift in Sources */,
+				E930112E2103E4A70045AA95 /* Utils.swift in Sources */,
+				E93011312103E4A70045AA95 /* RotationGesture.swift in Sources */,
 				CB7D0E272103E1E000A4AE82 /* ReadingViewController.swift in Sources */,
 				5B1805832103C34E00F48E6D /* RegisterBookViewController.swift in Sources */,
 				5B1805892103C5B500F48E6D /* DefaultManager.swift in Sources */,
