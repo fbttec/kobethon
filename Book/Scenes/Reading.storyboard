@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="YEh-N6-6sZ">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="fK6-id-ZAZ">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -10,22 +10,6 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Navigation Controller-->
-        <scene sceneID="EYE-PN-fut">
-            <objects>
-                <navigationController id="YEh-N6-6sZ" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="6Vy-gX-Ean">
-                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <connections>
-                        <segue destination="fK6-id-ZAZ" kind="relationship" relationship="rootViewController" id="dyV-JH-Reh"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="gCp-zI-i6e" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-1038" y="10"/>
-        </scene>
         <!--Timer-->
         <scene sceneID="GTA-kg-Fgd">
             <objects>
@@ -35,7 +19,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00:00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Iwr-iQ-wCc">
-                                <rect key="frame" x="122" y="520.5" width="131" height="58"/>
+                                <rect key="frame" x="122" y="498.5" width="131" height="58"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="48"/>
                                 <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
@@ -56,7 +40,7 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pwy-aD-dYz">
-                                <rect key="frame" x="16" y="137" width="343" height="41"/>
+                                <rect key="frame" x="16" y="93" width="343" height="41"/>
                                 <string key="text">Journey of a thousand miles 
 begins with a single step</string>
                                 <fontDescription key="fontDescription" type="italicSystem" pointSize="17"/>
@@ -64,9 +48,9 @@ begins with a single step</string>
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cJM-2C-Crr" customClass="CircularSlider" customModule="Book" customModuleProvider="target">
-                                <rect key="frame" x="62.5" y="240.5" width="250" height="250"/>
+                                <rect key="frame" x="62.5" y="218.5" width="250" height="250"/>
                                 <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bookSmall" translatesAutoresizingMaskIntoConstraints="NO" id="P0z-vW-AZl">
+                                    <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bookSmall" translatesAutoresizingMaskIntoConstraints="NO" id="P0z-vW-AZl">
                                         <rect key="frame" x="65" y="65" width="120" height="120"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="120" id="7HB-Er-q7p"/>
@@ -119,7 +103,7 @@ begins with a single step</string>
                                 </userDefinedRuntimeAttributes>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1/548" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HWg-4e-dWy">
-                                <rect key="frame" x="140" y="89" width="94" height="43"/>
+                                <rect key="frame" x="140" y="45" width="94" height="43"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="36"/>
                                 <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
@@ -147,6 +131,7 @@ begins with a single step</string>
                     <connections>
                         <outlet property="btReading" destination="6e7-5j-gcK" id="AgZ-fp-9aE"/>
                         <outlet property="circularSlider" destination="cJM-2C-Crr" id="sWw-rz-myg"/>
+                        <outlet property="imgBook" destination="P0z-vW-AZl" id="y9i-pO-akb"/>
                         <outlet property="startButton" destination="6e7-5j-gcK" id="hXg-8n-P8t"/>
                         <outlet property="timerLabel" destination="Iwr-iQ-wCc" id="bNS-cz-ssX"/>
                     </connections>

@@ -17,6 +17,7 @@ class ReadingViewController: UIViewController, CircularSliderDelegate {
     var totalTime = 0
     var isReading: Bool = false
     var book: Book?
+    @IBOutlet weak var imgBook: UIImageView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -77,9 +78,19 @@ class ReadingViewController: UIViewController, CircularSliderDelegate {
     //mark - circular delegate
     func circularSlider(_ circularSlider: CircularSlider, valueForValue value: Float) -> Float {
         totalTime = Int(value) * 60
-      print("TEST: \(totalTime)")
+        changeImage(value: value)
         updateTime()
         return value
+    }
+    
+    func changeImage(value: Float) {
+        if (value / circularSlider.maximumValue) < 0.33 {
+            imgBook.image = #imageLiteral(resourceName: "bookSmall")
+        } else if (value / circularSlider.maximumValue) < 0.77 {
+            imgBook.image = #imageLiteral(resourceName: "bookMedium")
+        } else {
+            imgBook.image = #imageLiteral(resourceName: "bookLarge")
+        }
     }
 }
 
