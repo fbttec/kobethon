@@ -17,10 +17,12 @@
 		5B1805832103C34E00F48E6D /* RegisterBookViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B1805822103C34E00F48E6D /* RegisterBookViewController.swift */; };
 		5B1805862103C3BD00F48E6D /* Book.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B1805852103C3BD00F48E6D /* Book.swift */; };
 		5B1805892103C5B500F48E6D /* DefaultManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B1805882103C5B500F48E6D /* DefaultManager.swift */; };
-		CB7D0E1A2103C68100A4AE82 /* Reading.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CB7D0E192103C68100A4AE82 /* Reading.storyboard */; };
-		CB7D0E1C2103C80E00A4AE82 /* ReadingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB7D0E1B2103C80E00A4AE82 /* ReadingViewController.swift */; };
 		99B8637E2103B6A500AB4275 /* (null) in Sources */ = {isa = PBXBuildFile; };
 		99B863802103E00100AB4275 /* NotificationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99B8637F2103E00100AB4275 /* NotificationManager.swift */; };
+		CB7D0E1A2103C68100A4AE82 /* (null) in Resources */ = {isa = PBXBuildFile; };
+		CB7D0E1C2103C80E00A4AE82 /* (null) in Sources */ = {isa = PBXBuildFile; };
+		CB7D0E262103E1E000A4AE82 /* Reading.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CB7D0E242103E1E000A4AE82 /* Reading.storyboard */; };
+		CB7D0E272103E1E000A4AE82 /* ReadingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB7D0E252103E1E000A4AE82 /* ReadingViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +51,8 @@
 		5B1805852103C3BD00F48E6D /* Book.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Book.swift; sourceTree = "<group>"; };
 		5B1805882103C5B500F48E6D /* DefaultManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultManager.swift; sourceTree = "<group>"; };
 		99B8637F2103E00100AB4275 /* NotificationManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationManager.swift; sourceTree = "<group>"; };
+		CB7D0E242103E1E000A4AE82 /* Reading.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Reading.storyboard; sourceTree = "<group>"; };
+		CB7D0E252103E1E000A4AE82 /* ReadingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReadingViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -120,7 +124,7 @@
 		5B1805792103B39400F48E6D /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
-				CB7D0E162103C60100A4AE82 /* ReadingBook */,
+				CB7D0E282103E1E600A4AE82 /* ReadingBook */,
 				5B1805872103C5A600F48E6D /* Common */,
 				5B1805842103C3AA00F48E6D /* Model */,
 				5B18057F2103C2B200F48E6D /* RegisteBook */,
@@ -177,6 +181,15 @@
 				99B8637F2103E00100AB4275 /* NotificationManager.swift */,
 			);
 			path = Manager;
+			sourceTree = "<group>";
+		};
+		CB7D0E282103E1E600A4AE82 /* ReadingBook */ = {
+			isa = PBXGroup;
+			children = (
+				CB7D0E242103E1E000A4AE82 /* Reading.storyboard */,
+				CB7D0E252103E1E000A4AE82 /* ReadingViewController.swift */,
+			);
+			name = ReadingBook;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -261,8 +274,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				5B1805632103B37000F48E6D /* LaunchScreen.storyboard in Resources */,
-				CB7D0E1A2103C68100A4AE82 /* Reading.storyboard in Resources */,
+				CB7D0E1A2103C68100A4AE82 /* (null) in Resources */,
 				5B1805602103B37000F48E6D /* Assets.xcassets in Resources */,
+				CB7D0E262103E1E000A4AE82 /* Reading.storyboard in Resources */,
 				5B1805812103C2D200F48E6D /* RegisterBook.storyboard in Resources */,
 				5B18055E2103B36F00F48E6D /* Main.storyboard in Resources */,
 			);
@@ -287,9 +301,10 @@
 				5B18055B2103B36F00F48E6D /* ViewController.swift in Sources */,
 				5B1805592103B36F00F48E6D /* AppDelegate.swift in Sources */,
 				99B863802103E00100AB4275 /* NotificationManager.swift in Sources */,
+				CB7D0E272103E1E000A4AE82 /* ReadingViewController.swift in Sources */,
 				5B1805832103C34E00F48E6D /* RegisterBookViewController.swift in Sources */,
 				5B1805892103C5B500F48E6D /* DefaultManager.swift in Sources */,
-				CB7D0E1C2103C80E00A4AE82 /* ReadingViewController.swift in Sources */,
+				CB7D0E1C2103C80E00A4AE82 /* (null) in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
