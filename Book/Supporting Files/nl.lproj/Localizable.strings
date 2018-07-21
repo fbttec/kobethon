@@ -8,3 +8,17 @@
 
 "start" = "Begin";
 "cancel" = "Annuleer";
+"startPhrase1" = "Een boek is een droom die je in je hand kunt houden";
+"startPhrase2" = "Lezen geeft ons de mogelijkheid om weg te gaan wanneer we moeten blijven waar we zijn";
+"startPhrase3" = "Iedereen die zegt dat je maar een leven hebt heeft boeken nog niet geleerd om boeken te lezen";
+"startPhrase4" = "De reis van duizend mijl begint met een enkele stap";
+
+"middlePhrase1" = "Wanneer ik over het leven denk, zie ik het als een goed boek. Hoe meer dat je erin leest, hoe meer dat het logisch wordt";
+"middlePhrase2" = "Het lijkt altijd onmogelijk tot dat het is gedaan";
+"middlePhrase3" = "Er is geen een vriend zo trouw als een boek";
+"middlePhrase4" = "Uitdagingen maken het leven interessant. Ze overkomen maakt het het leven waard";
+
+"endPhrase1" = "Zeg niet dat je niet genoeg tijd hebt. Je hebt precies evenveel uren in de dag als Helen Keller, Pasteur, Michelangelo, Moeder Theresa, Leaonardo da Vinci, Thomas Jefferson en Albert Einstein";
+"endPhrase2" = "Daag jezelf uit, want niemand anders gaat het voor je doen";
+"endPhrase3" = "Ik zeg niet dat het makkelijk wordt, ik zeg dat het het waard wordt";
+"endPhrase4" = "Er zijn geen kortere wegen naar plekken die het waard zijn om heen te gaan";

@@ -8,3 +8,17 @@
 
 "start" = "Start";
 "cancel" = "Cancel";
+"startPhrase1" = "A book is a dream that you hold in your hand";
+"startPhrase2" = "Reading gives us someplace to go when we have to stay where we are";
+"startPhrase3" = "Anyone who says they have only one life to live must not know how to read a book";
+"startPhrase4" = "Journey of a thousand miles begins with a single step";
+
+"middlePhrase1" = "I think of life as a good book. The further you get into it, the more it begins to make sense";
+"middlePhrase2" = "It always seems impossible until it is done";
+"middlePhrase3" = "There is no friend as loyal as a book";
+"middlePhrase4" = "Challenges are what make life interesting. Overcoming them is what makes life meaningful";
+
+"endPhrase1" = "Don’t say you don’t have enough time. You have exactly the same number of hours per day that were given to Helen Keller, Pasteur, Michelangelo, Mother Teresea, Leonardo da Vinci, Thomas Jefferson, and Albert Einstein";
+"endPhrase2" = "Push yourself because, no one else is going to do it for you";
+"endPhrase3" = "I'm not telling you it's going to be easy, i'm telling you it's going to be worth it";
+"endPhrase4" = "There are no shortcuts to any place worth going";

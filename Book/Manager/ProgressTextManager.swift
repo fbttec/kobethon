@@ -10,9 +10,9 @@ import Foundation
 
 class ProgressTextManager {
   
-  static let firstSegmentString = ["A1", "A2", "A3"]
-  static let secondSegmentStrings = ["B1", "B2", "B3"]
-  static let thirdSegmentStrings = ["C1", "C2", "C3"]
+  static let firstSegmentString = [StringKeys.startPhrase1, StringKeys.startPhrase2, StringKeys.startPhrase3, StringKeys.startPhrase4]
+  static let secondSegmentStrings = [StringKeys.middlePhrase1, StringKeys.middlePhrase2, StringKeys.middlePhrase3, StringKeys.middlePhrase4]
+  static let thirdSegmentStrings = [StringKeys.endPhrase1, StringKeys.endPhrase2, StringKeys.endPhrase3, StringKeys.endPhrase4]
   
   static func progressText(currentPage: Int, totalPages: Int) -> String {
     let percentage = (currentPage * 100) / totalPages

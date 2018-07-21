@@ -8,3 +8,17 @@
 
 "start" = "Comienzo";
 "cancel" = "Cancelar";
+"startPhrase1" = "Un libro es un sueño que tienes en tu mano";
+"startPhrase2" = "La lectura nos da un lugar para ir cuando tenemos que quedarnos donde estamos";
+"startPhrase3" = "Cualquiera que diga que solo tiene una vida para vivir no debe saber lo que es leer un libro";
+"startPhrase4" = "Un viaje de mil millas comienza con un solo paso";
+
+"middlePhrase1" = "Pienso en la vida como un buen libro. Cuanto más te adentras en él, más comienza a tener sentido";
+"middlePhrase2" = "Siempre parece imposible hasta que esté hecho";
+"middlePhrase3" = "No hay amigo tan leal como un libro";
+"middlePhrase4" = "Los desafíos son los que hacen que la vida sea interesante. Superarlos es lo que hace que la vida sea significativa";
+
+"endPhrase1" = "No digas que no tienes suficiente tiempo. Tiene exactamente el mismo número de horas por día que Helen Keller, Pasteur, Michelangelo, Madre Teresea, Leonardo da Vinci, Thomas Jefferson y Albert Einstein";
+"endPhrase2" = "Esfuérzate porque nadie más va a hacerlo por ti";
+"endPhrase3" = "No estoy diciendo que va a ser fácil, digo que valdrá la pena";
+"endPhrase4" = "No hay atajos a ningún lugar al que valga la pena ir";
