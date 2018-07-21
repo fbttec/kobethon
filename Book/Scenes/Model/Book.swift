@@ -22,7 +22,7 @@ struct Book {
     
 }
 
-extension Book: Decodable {
+extension Book: Codable {
     enum CodingKeys: String,CodingKey {
         case title = "title"
         case numberOfPagesRead = "numberOfPagesRead"
@@ -36,4 +36,12 @@ extension Book: Decodable {
         let totalOfPages: Int = try container.decode(Int.self, forKey: .totalOfPages) // extracting the data
         self.init(title: title, numberOfPagesRead: numberOfPagesRead, totalOfPages: totalOfPages)
     }
+    
+    func encode(to encoder: Swift.Encoder) throws {
+        var container = encoder.container(keyedBy: CodingKeys.self)
+        try container.encode(title, forKey: .title)
+        try container.encode(numberOfPagesRead, forKey: .numberOfPagesRead)
+        try container.encode(totalOfPages, forKey: .totalOfPages)
+    }
+    
 }
