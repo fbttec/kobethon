@@ -16,6 +16,7 @@ class ReadingViewController: UIViewController, CircularSliderDelegate {
     var countdownTimer: Timer?
     var totalTime = 0
     var isReading: Bool = false
+    var book: Book?
     
     override func viewDidLoad() {
         super.viewDidLoad()

@@ -13,11 +13,13 @@ struct Book {
     var title: String?
     var numberOfPagesRead: Int?
     var totalOfPages: Int?
+    var author: String?
     
-    init(title: String, numberOfPagesRead: Int, totalOfPages: Int) {
+    init(title: String, numberOfPagesRead: Int, totalOfPages: Int, author: String) {
         self.title = title
         self.numberOfPagesRead = numberOfPagesRead
         self.totalOfPages = totalOfPages
+        self.author = author
     }
     
 }
@@ -27,6 +29,7 @@ extension Book: Codable {
         case title = "title"
         case numberOfPagesRead = "numberOfPagesRead"
         case totalOfPages = "totalOfPages"
+        case author = "author"
     }
     
     init(from decoder: Decoder) throws {
@@ -34,7 +37,11 @@ extension Book: Codable {
         let title: String = try container.decode(String.self, forKey: .title) // extracting the data
         let numberOfPagesRead: Int = try container.decode(Int.self, forKey: .numberOfPagesRead) // extracting the data
         let totalOfPages: Int = try container.decode(Int.self, forKey: .totalOfPages) // extracting the data
-        self.init(title: title, numberOfPagesRead: numberOfPagesRead, totalOfPages: totalOfPages)
+        let author: String = try container.decode(String.self, forKey: .author)
+        self.init(title: title,
+                  numberOfPagesRead: numberOfPagesRead,
+                  totalOfPages: totalOfPages,
+                  author: author)
     }
     
     func encode(to encoder: Swift.Encoder) throws {
@@ -42,6 +49,7 @@ extension Book: Codable {
         try container.encode(title, forKey: .title)
         try container.encode(numberOfPagesRead, forKey: .numberOfPagesRead)
         try container.encode(totalOfPages, forKey: .totalOfPages)
+        try container.encode(author, forKey: .author)
     }
     
 }
