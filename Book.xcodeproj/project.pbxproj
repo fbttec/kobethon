@@ -13,6 +13,7 @@
 		5B1805602103B37000F48E6D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5B18055F2103B37000F48E6D /* Assets.xcassets */; };
 		5B1805632103B37000F48E6D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5B1805612103B37000F48E6D /* LaunchScreen.storyboard */; };
 		5B18056E2103B37000F48E6D /* BookTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B18056D2103B37000F48E6D /* BookTests.swift */; };
+		99B8637E2103B6A500AB4275 /* NotificationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99B8637D2103B6A500AB4275 /* NotificationManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +37,7 @@
 		5B1805692103B37000F48E6D /* BookTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BookTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5B18056D2103B37000F48E6D /* BookTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookTests.swift; sourceTree = "<group>"; };
 		5B18056F2103B37000F48E6D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		99B8637D2103B6A500AB4275 /* NotificationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +79,7 @@
 		5B1805572103B36F00F48E6D /* Book */ = {
 			isa = PBXGroup;
 			children = (
+				99B8637C2103B69000AB4275 /* Manager */,
 				5B1805792103B39400F48E6D /* Scenes */,
 				5B1805782103B37D00F48E6D /* Supporting Files */,
 			);
@@ -126,6 +129,14 @@
 				5B18055C2103B36F00F48E6D /* Main.storyboard */,
 			);
 			path = Main;
+			sourceTree = "<group>";
+		};
+		99B8637C2103B69000AB4275 /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+				99B8637D2103B6A500AB4275 /* NotificationManager.swift */,
+			);
+			path = Manager;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -229,6 +240,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				99B8637E2103B6A500AB4275 /* NotificationManager.swift in Sources */,
 				5B18055B2103B36F00F48E6D /* ViewController.swift in Sources */,
 				5B1805592103B36F00F48E6D /* AppDelegate.swift in Sources */,
 			);
@@ -393,6 +405,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = W9C5RFHWCR;
 				INFOPLIST_FILE = "$(SRCROOT)/Book/Supporting Files/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -411,6 +424,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = W9C5RFHWCR;
 				INFOPLIST_FILE = "$(SRCROOT)/Book/Supporting Files/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
