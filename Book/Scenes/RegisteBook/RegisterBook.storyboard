@@ -87,6 +87,7 @@
                     <connections>
                         <outlet property="addBarButtonItem" destination="c9d-fR-0Rl" id="P6p-wu-XcY"/>
                         <outlet property="collectionView" destination="6a8-wi-XK2" id="fHB-pO-K43"/>
+                        <segue destination="TFW-iC-q8f" kind="show" identifier="goToReading" id="b0M-w7-7Xm"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JrS-JC-qAD" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -97,6 +98,14 @@
                 </barButtonItem>
             </objects>
             <point key="canvasLocation" x="1112.8" y="151.57421289355324"/>
+        </scene>
+        <!--Reading-->
+        <scene sceneID="BFX-tV-Fip">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Reading" id="TFW-iC-q8f" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3DL-sd-CB3" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1766" y="151"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="96u-0C-Fwh">

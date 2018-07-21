@@ -19,6 +19,7 @@ class RegisterBookViewController: UIViewController {
     @IBOutlet var addBarButtonItem: UIBarButtonItem!
     
     var books: [Book]?
+    var selectedBook: Book?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -63,12 +64,22 @@ class RegisterBookViewController: UIViewController {
         self.present(alertController, animated: true, completion: nil)
         
     }
+    
+    // MARK: - NAVIGATION
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let readingVC = segue.destination as? ReadingViewController,
+            segue.identifier == "goToReading" {
+            readingVC.book = selectedBook
+        }
+    }
+    
 }
 
 extension RegisterBookViewController: UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        
+        selectedBook = books?[indexPath.row]
+        self.performSegue(withIdentifier: "goToReading", sender: nil)
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
