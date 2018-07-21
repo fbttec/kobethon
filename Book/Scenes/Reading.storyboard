@@ -26,7 +26,7 @@
             </objects>
             <point key="canvasLocation" x="-1038" y="10"/>
         </scene>
-        <!--Reading View Controller-->
+        <!--Timer-->
         <scene sceneID="GTA-kg-Fgd">
             <objects>
                 <viewController id="fK6-id-ZAZ" customClass="ReadingViewController" customModule="Book" customModuleProvider="target" sceneMemberID="viewController">
@@ -41,10 +41,15 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6e7-5j-gcK">
-                                <rect key="frame" x="128.5" y="611" width="118" height="36"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <state key="normal" title="Start Reading">
-                                    <color key="titleColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <rect key="frame" x="62.5" y="597" width="251" height="50"/>
+                                <color key="backgroundColor" red="0.43137254899999999" green="0.3294117647" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="9SH-8a-zxL"/>
+                                    <constraint firstAttribute="width" constant="251" id="b4e-mG-h48"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
+                                <state key="normal" title="START READING">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
                                     <action selector="startTimerPressed:" destination="fK6-id-ZAZ" eventType="touchUpInside" id="ScF-Ng-gtp"/>
@@ -69,7 +74,7 @@ begins with a single step</string>
                                         </constraints>
                                     </imageView>
                                 </subviews>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="250" id="aeM-HY-sXJ"/>
                                     <constraint firstItem="P0z-vW-AZl" firstAttribute="centerY" secondItem="cJM-2C-Crr" secondAttribute="centerY" id="d5b-xO-rQX"/>
@@ -101,7 +106,7 @@ begins with a single step</string>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="string" keyPath="title" value=" "/>
                                     <userDefinedRuntimeAttribute type="color" keyPath="pgHighlightedColor">
-                                        <color key="value" red="0.21568627450980393" green="0.71764705882352942" blue="0.63137254901960782" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="value" red="0.43137254901960786" green="0.32941176470588235" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="color" keyPath="bgColor">
                                         <color key="value" red="0.6705882352941176" green="0.70588235294117641" blue="0.74117647058823533" alpha="1" colorSpace="calibratedRGB"/>
@@ -120,7 +125,8 @@ begins with a single step</string>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" red="0.93725490196078431" green="0.93725490196078431" blue="0.95686274509803915" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="tintColor" red="0.43137254899999999" green="0.3294117647" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="HWg-4e-dWy" firstAttribute="top" secondItem="vWZ-UK-yeN" secondAttribute="top" constant="25" id="0mk-BW-Zc0"/>
                             <constraint firstItem="Pwy-aD-dYz" firstAttribute="top" secondItem="HWg-4e-dWy" secondAttribute="bottom" constant="5" id="5eX-Yi-KM4"/>
@@ -137,8 +143,9 @@ begins with a single step</string>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="vWZ-UK-yeN"/>
                     </view>
-                    <navigationItem key="navigationItem" id="0ZJ-mM-rN7"/>
+                    <navigationItem key="navigationItem" title="Timer" id="0ZJ-mM-rN7"/>
                     <connections>
+                        <outlet property="btReading" destination="6e7-5j-gcK" id="AgZ-fp-9aE"/>
                         <outlet property="circularSlider" destination="cJM-2C-Crr" id="sWw-rz-myg"/>
                         <outlet property="startButton" destination="6e7-5j-gcK" id="hXg-8n-P8t"/>
                         <outlet property="timerLabel" destination="Iwr-iQ-wCc" id="bNS-cz-ssX"/>
@@ -150,6 +157,6 @@ begins with a single step</string>
         </scene>
     </scenes>
     <resources>
-        <image name="bookSmall" width="108" height="135"/>
+        <image name="bookSmall" width="96" height="108"/>
     </resources>
 </document>

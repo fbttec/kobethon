@@ -10,7 +10,7 @@ import UIKit
 
 class ReadingViewController: UIViewController, CircularSliderDelegate {
     @IBOutlet weak var circularSlider: CircularSlider!
-    
+    @IBOutlet weak var btReading: UIButton!
     @IBOutlet weak var timerLabel: UILabel!
     @IBOutlet weak var startButton: UIButton!
     var countdownTimer: Timer?
@@ -20,6 +20,7 @@ class ReadingViewController: UIViewController, CircularSliderDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         circularSlider.delegate = self
+        btReading.layer.cornerRadius = btReading.frame.height/2
     }
     
     @IBAction func changeTimerValue(_ sender: UISlider) {
