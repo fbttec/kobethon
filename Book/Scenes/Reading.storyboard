@@ -9,6 +9,14 @@
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="Lato-Bold.ttf">
+            <string>Lato-Bold</string>
+        </array>
+        <array key="Lato-Italic.ttf">
+            <string>Lato-Italic</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--Timer-->
         <scene sceneID="GTA-kg-Fgd">
@@ -19,8 +27,8 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00:00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Iwr-iQ-wCc">
-                                <rect key="frame" x="122" y="498.5" width="131" height="58"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="48"/>
+                                <rect key="frame" x="125.5" y="498.5" width="124" height="58"/>
+                                <fontDescription key="fontDescription" name="Lato-Bold" family="Lato" pointSize="48"/>
                                 <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -31,7 +39,7 @@
                                     <constraint firstAttribute="height" constant="50" id="9SH-8a-zxL"/>
                                     <constraint firstAttribute="width" constant="251" id="b4e-mG-h48"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
+                                <fontDescription key="fontDescription" name="Lato-Bold" family="Lato" pointSize="17"/>
                                 <state key="normal" title="START READING">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
@@ -40,10 +48,10 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pwy-aD-dYz">
-                                <rect key="frame" x="16" y="93" width="343" height="41"/>
+                                <rect key="frame" x="16" y="93.5" width="343" height="34"/>
                                 <string key="text">Journey of a thousand miles 
 begins with a single step</string>
-                                <fontDescription key="fontDescription" type="italicSystem" pointSize="17"/>
+                                <fontDescription key="fontDescription" name="Lato-Italic" family="Lato" pointSize="14"/>
                                 <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -103,8 +111,8 @@ begins with a single step</string>
                                 </userDefinedRuntimeAttributes>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1/548" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HWg-4e-dWy">
-                                <rect key="frame" x="140" y="45" width="94" height="43"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="36"/>
+                                <rect key="frame" x="137.5" y="45" width="100.5" height="44"/>
+                                <fontDescription key="fontDescription" name="Lato-Bold" family="Lato" pointSize="36"/>
                                 <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
