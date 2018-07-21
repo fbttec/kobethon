@@ -29,8 +29,7 @@ class ReadingViewController: UIViewController, CircularSliderDelegate {
     
     func startTimer() {
         startButton.setTitle("Cancel", for: .normal)
-//        slider.isEnabled = false
-//        slider.alpha = 0.5
+        circularSlider.isUserInteractionEnabled = false
         countdownTimer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(updateTime), userInfo: nil, repeats: true)
     }
     
@@ -47,20 +46,20 @@ class ReadingViewController: UIViewController, CircularSliderDelegate {
     func endTimer() {
         countdownTimer?.invalidate()
         totalTime = 0
-//        slider.isEnabled = true
-//        slider.alpha = 1.0
-//        slider.value = 0.0
+        circularSlider.isUserInteractionEnabled = true
+        circularSlider.value = 0.0
         timerLabel.text = "\(timeFormatted(totalTime))"
         startButton.setTitle("Start", for: .normal)
     }
     
     func timeFormatted(_ totalSeconds: Int) -> String {
         guard totalSeconds > 0 else {
-            return "00:00"
+          return "00:00:00"
         }
         let seconds: Int = totalSeconds % 60
-        let minutes: Int = (totalSeconds / 60) % 60 
-        return String(format: "%02d:%02d", minutes, seconds)
+        let minutes: Int = (totalSeconds / 60) % 60
+        let hour: Int = (totalSeconds / 3600)
+        return String(format: "%02d:%02d:%02d", hour, minutes, seconds)
     }
     
     @IBAction func startTimerPressed(_ sender: UIButton) {
@@ -76,6 +75,7 @@ class ReadingViewController: UIViewController, CircularSliderDelegate {
     //mark - circular delegate
     func circularSlider(_ circularSlider: CircularSlider, valueForValue value: Float) -> Float {
         totalTime = Int(value) * 60
+      print("TEST: \(totalTime)")
         updateTime()
         return value
     }
