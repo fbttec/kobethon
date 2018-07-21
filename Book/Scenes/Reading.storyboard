@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="fK6-id-ZAZ">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="YEh-N6-6sZ">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -10,6 +10,22 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="EYE-PN-fut">
+            <objects>
+                <navigationController id="YEh-N6-6sZ" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="6Vy-gX-Ean">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="fK6-id-ZAZ" kind="relationship" relationship="rootViewController" id="dyV-JH-Reh"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gCp-zI-i6e" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1038" y="10"/>
+        </scene>
         <!--Reading View Controller-->
         <scene sceneID="GTA-kg-Fgd">
             <objects>
@@ -19,38 +35,50 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00:00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Iwr-iQ-wCc">
-                                <rect key="frame" x="146" y="325.5" width="82.5" height="36"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
-                                <nil key="textColor"/>
+                                <rect key="frame" x="122" y="520.5" width="131" height="58"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="48"/>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1" minValue="0.0" maxValue="60" translatesAutoresizingMaskIntoConstraints="NO" id="jTa-UH-lqF">
-                                <rect key="frame" x="14" y="394.5" width="347" height="31"/>
-                                <connections>
-                                    <action selector="changeTimerValue:" destination="fK6-id-ZAZ" eventType="valueChanged" id="1QC-Xd-IuM"/>
-                                </connections>
-                            </slider>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6e7-5j-gcK">
-                                <rect key="frame" x="30" y="456" width="315" height="30"/>
-                                <color key="backgroundColor" red="0.94901960780000005" green="0.66274509800000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <state key="normal" title="Start"/>
+                                <rect key="frame" x="128.5" y="611" width="118" height="36"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="Start Reading">
+                                    <color key="titleColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
                                 <connections>
                                     <action selector="startTimerPressed:" destination="fK6-id-ZAZ" eventType="touchUpInside" id="ScF-Ng-gtp"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Você quer ler por quanto tempo?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pwy-aD-dYz">
-                                <rect key="frame" x="61.5" y="242" width="251" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pwy-aD-dYz">
+                                <rect key="frame" x="16" y="137" width="343" height="41"/>
+                                <string key="text">Journey of a thousand miles 
+begins with a single step</string>
+                                <fontDescription key="fontDescription" type="italicSystem" pointSize="17"/>
+                                <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cJM-2C-Crr" customClass="CircularSlider" customModule="Book" customModuleProvider="target">
-                                <rect key="frame" x="75" y="231" width="225" height="204"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cJM-2C-Crr" customClass="CircularSlider" customModule="Book" customModuleProvider="target">
+                                <rect key="frame" x="62.5" y="240.5" width="250" height="250"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bookSmall" translatesAutoresizingMaskIntoConstraints="NO" id="P0z-vW-AZl">
+                                        <rect key="frame" x="65" y="65" width="120" height="120"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="120" id="7HB-Er-q7p"/>
+                                            <constraint firstAttribute="width" constant="120" id="bbR-fq-mFZ"/>
+                                        </constraints>
+                                    </imageView>
+                                </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="250" id="aeM-HY-sXJ"/>
+                                    <constraint firstItem="P0z-vW-AZl" firstAttribute="centerY" secondItem="cJM-2C-Crr" secondAttribute="centerY" id="d5b-xO-rQX"/>
+                                    <constraint firstAttribute="width" constant="250" id="o91-4a-yfv"/>
+                                    <constraint firstItem="P0z-vW-AZl" firstAttribute="centerX" secondItem="cJM-2C-Crr" secondAttribute="centerX" id="qrz-t6-Uhb"/>
+                                </constraints>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="value">
-                                        <real key="value" value="49"/>
+                                        <real key="value" value="25"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="number" keyPath="radiansOffset">
                                         <real key="value" value="0.0"/>
@@ -59,7 +87,7 @@
                                         <real key="value" value="0.0"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="number" keyPath="maximumValue">
-                                        <real key="value" value="100"/>
+                                        <real key="value" value="125"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="number" keyPath="lineWidth">
                                         <real key="value" value="8"/>
@@ -78,32 +106,40 @@
                                     <userDefinedRuntimeAttribute type="color" keyPath="bgColor">
                                         <color key="value" red="0.6705882352941176" green="0.70588235294117641" blue="0.74117647058823533" alpha="1" colorSpace="calibratedRGB"/>
                                     </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="boolean" keyPath="hideLabels" value="NO"/>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="hideLabels" value="YES"/>
                                     <userDefinedRuntimeAttribute type="color" keyPath="pgNormalColor">
                                         <color key="value" red="0.6705882353" green="0.70588235290000001" blue="0.74117647060000003" alpha="1" colorSpace="calibratedRGB"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="boolean" keyPath="highlighted" value="YES"/>
                                 </userDefinedRuntimeAttributes>
                             </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1/548" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HWg-4e-dWy">
+                                <rect key="frame" x="140" y="89" width="94" height="43"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="36"/>
+                                <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="6e7-5j-gcK" firstAttribute="centerX" secondItem="vWZ-UK-yeN" secondAttribute="centerX" id="7sH-jK-buN"/>
-                            <constraint firstItem="vWZ-UK-yeN" firstAttribute="trailing" secondItem="6e7-5j-gcK" secondAttribute="trailing" constant="30" id="9or-D4-J4g"/>
-                            <constraint firstItem="vWZ-UK-yeN" firstAttribute="trailing" secondItem="jTa-UH-lqF" secondAttribute="trailing" constant="16" id="NyB-5C-d5V"/>
-                            <constraint firstItem="Iwr-iQ-wCc" firstAttribute="centerX" secondItem="vWZ-UK-yeN" secondAttribute="centerX" id="O9z-dZ-otj"/>
-                            <constraint firstItem="6e7-5j-gcK" firstAttribute="top" secondItem="jTa-UH-lqF" secondAttribute="bottom" constant="31.5" id="QG6-CS-Ka6"/>
-                            <constraint firstItem="Pwy-aD-dYz" firstAttribute="centerX" secondItem="Iwr-iQ-wCc" secondAttribute="centerX" id="edj-iA-iDO"/>
-                            <constraint firstItem="6e7-5j-gcK" firstAttribute="leading" secondItem="vWZ-UK-yeN" secondAttribute="leading" constant="30" id="ii0-ib-jub"/>
-                            <constraint firstItem="jTa-UH-lqF" firstAttribute="leading" secondItem="vWZ-UK-yeN" secondAttribute="leading" constant="16" id="jSQ-7B-bqa"/>
-                            <constraint firstItem="Iwr-iQ-wCc" firstAttribute="centerY" secondItem="vWZ-UK-yeN" secondAttribute="centerY" id="mKI-PG-BFa"/>
-                            <constraint firstItem="jTa-UH-lqF" firstAttribute="top" secondItem="Iwr-iQ-wCc" secondAttribute="bottom" constant="33" id="uLA-8h-u8w"/>
-                            <constraint firstItem="Iwr-iQ-wCc" firstAttribute="top" secondItem="Pwy-aD-dYz" secondAttribute="bottom" constant="62.5" id="w4d-S1-Hps"/>
+                            <constraint firstItem="HWg-4e-dWy" firstAttribute="top" secondItem="vWZ-UK-yeN" secondAttribute="top" constant="25" id="0mk-BW-Zc0"/>
+                            <constraint firstItem="Pwy-aD-dYz" firstAttribute="top" secondItem="HWg-4e-dWy" secondAttribute="bottom" constant="5" id="5eX-Yi-KM4"/>
+                            <constraint firstItem="HWg-4e-dWy" firstAttribute="centerX" secondItem="vWZ-UK-yeN" secondAttribute="centerX" id="5my-FM-5el"/>
+                            <constraint firstItem="Pwy-aD-dYz" firstAttribute="leading" secondItem="vWZ-UK-yeN" secondAttribute="leading" constant="16" id="CSt-st-VCc"/>
+                            <constraint firstItem="vWZ-UK-yeN" firstAttribute="bottom" secondItem="6e7-5j-gcK" secondAttribute="bottom" constant="20" id="CWP-Kb-dTR"/>
+                            <constraint firstItem="6e7-5j-gcK" firstAttribute="centerX" secondItem="vWZ-UK-yeN" secondAttribute="centerX" id="F1A-Oc-KkK"/>
+                            <constraint firstItem="vWZ-UK-yeN" firstAttribute="trailing" secondItem="Pwy-aD-dYz" secondAttribute="trailing" constant="16" id="HsC-fl-LuG"/>
+                            <constraint firstItem="Pwy-aD-dYz" firstAttribute="centerX" secondItem="vWZ-UK-yeN" secondAttribute="centerX" id="Ogs-sa-GvC"/>
+                            <constraint firstItem="Iwr-iQ-wCc" firstAttribute="centerX" secondItem="vWZ-UK-yeN" secondAttribute="centerX" id="XyE-PZ-fKc"/>
+                            <constraint firstItem="cJM-2C-Crr" firstAttribute="centerX" secondItem="vWZ-UK-yeN" secondAttribute="centerX" id="tKu-5m-8of"/>
+                            <constraint firstItem="cJM-2C-Crr" firstAttribute="centerY" secondItem="vWZ-UK-yeN" secondAttribute="centerY" id="xk6-II-bll"/>
+                            <constraint firstItem="Iwr-iQ-wCc" firstAttribute="top" secondItem="cJM-2C-Crr" secondAttribute="bottom" constant="30" id="zZh-X9-MKR"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="vWZ-UK-yeN"/>
                     </view>
+                    <navigationItem key="navigationItem" id="0ZJ-mM-rN7"/>
                     <connections>
-                        <outlet property="slider" destination="jTa-UH-lqF" id="vJn-t1-kTp"/>
+                        <outlet property="circularSlider" destination="cJM-2C-Crr" id="sWw-rz-myg"/>
                         <outlet property="startButton" destination="6e7-5j-gcK" id="hXg-8n-P8t"/>
                         <outlet property="timerLabel" destination="Iwr-iQ-wCc" id="bNS-cz-ssX"/>
                     </connections>
@@ -113,4 +149,7 @@
             <point key="canvasLocation" x="-140" y="2.2488755622188905"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="bookSmall" width="108" height="135"/>
+    </resources>
 </document>
