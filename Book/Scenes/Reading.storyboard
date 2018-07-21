@@ -30,10 +30,13 @@
                                     <action selector="changeTimerValue:" destination="fK6-id-ZAZ" eventType="valueChanged" id="1QC-Xd-IuM"/>
                                 </connections>
                             </slider>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6e7-5j-gcK">
-                                <rect key="frame" x="170" y="456" width="34" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6e7-5j-gcK">
+                                <rect key="frame" x="30" y="456" width="315" height="30"/>
+                                <color key="backgroundColor" red="0.94901960780000005" green="0.66274509800000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <state key="normal" title="Start"/>
+                                <connections>
+                                    <action selector="startTimerPressed:" destination="fK6-id-ZAZ" eventType="touchUpInside" id="ScF-Ng-gtp"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Você quer ler por quanto tempo?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pwy-aD-dYz">
                                 <rect key="frame" x="61.5" y="242" width="251" height="21"/>
@@ -44,9 +47,13 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="6e7-5j-gcK" firstAttribute="centerX" secondItem="vWZ-UK-yeN" secondAttribute="centerX" id="7sH-jK-buN"/>
+                            <constraint firstItem="vWZ-UK-yeN" firstAttribute="trailing" secondItem="6e7-5j-gcK" secondAttribute="trailing" constant="30" id="9or-D4-J4g"/>
                             <constraint firstItem="vWZ-UK-yeN" firstAttribute="trailing" secondItem="jTa-UH-lqF" secondAttribute="trailing" constant="16" id="NyB-5C-d5V"/>
                             <constraint firstItem="Iwr-iQ-wCc" firstAttribute="centerX" secondItem="vWZ-UK-yeN" secondAttribute="centerX" id="O9z-dZ-otj"/>
+                            <constraint firstItem="6e7-5j-gcK" firstAttribute="top" secondItem="jTa-UH-lqF" secondAttribute="bottom" constant="31.5" id="QG6-CS-Ka6"/>
                             <constraint firstItem="Pwy-aD-dYz" firstAttribute="centerX" secondItem="Iwr-iQ-wCc" secondAttribute="centerX" id="edj-iA-iDO"/>
+                            <constraint firstItem="6e7-5j-gcK" firstAttribute="leading" secondItem="vWZ-UK-yeN" secondAttribute="leading" constant="30" id="ii0-ib-jub"/>
                             <constraint firstItem="jTa-UH-lqF" firstAttribute="leading" secondItem="vWZ-UK-yeN" secondAttribute="leading" constant="16" id="jSQ-7B-bqa"/>
                             <constraint firstItem="Iwr-iQ-wCc" firstAttribute="centerY" secondItem="vWZ-UK-yeN" secondAttribute="centerY" id="mKI-PG-BFa"/>
                             <constraint firstItem="jTa-UH-lqF" firstAttribute="top" secondItem="Iwr-iQ-wCc" secondAttribute="bottom" constant="33" id="uLA-8h-u8w"/>
