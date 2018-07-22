@@ -37,17 +37,14 @@ class RegisterBookViewController: UIViewController {
             textField.placeholder = "Book Title"
         }
         alertController.addTextField { (textField) in
-            textField.placeholder = "Author"
-        }
-        alertController.addTextField { (textField) in
             textField.placeholder = "Total pages"
         }
         let saveAction = UIAlertAction(title: "Save", style: .default) { (action) in
-            let titleTextField = alertController.textFields![0] as UITextField
-            let authorTextField = alertController.textFields![1] as UITextField
-            let totalPagesTextField = alertController.textFields![2] as UITextField
-            let totalPages = Int(totalPagesTextField.text!)
-            let book = Book(title: titleTextField.text!, numberOfPagesRead: 0, totalOfPages: totalPages!, author: authorTextField.text!)
+            guard let titleTextField = alertController.textFields?[0],
+                let totalPagesTextField = alertController.textFields?[1] else { return }
+            
+            let totalPages = Int(totalPagesTextField.text ?? "0")
+            let book = Book(title: titleTextField.text!, numberOfPagesRead: 0, totalOfPages: totalPages!)
             if self.books == nil {
                 self.books = [book]
             } else {
