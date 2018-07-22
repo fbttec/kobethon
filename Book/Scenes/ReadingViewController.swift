@@ -13,16 +13,20 @@ class ReadingViewController: UIViewController, CircularSliderDelegate {
     @IBOutlet weak var btReading: UIButton!
     @IBOutlet weak var timerLabel: UILabel!
     @IBOutlet weak var startButton: UIButton!
+    @IBOutlet weak var imgBook: UIImageView!
+  @IBOutlet weak var pagesText: UILabel!
+  @IBOutlet weak var pagesLabel: UILabel!
     var countdownTimer: Timer?
     var totalTime = 0
     var isReading: Bool = false
     var book: Book?
-    @IBOutlet weak var imgBook: UIImageView!
-    
-    override func viewDidLoad() {
+  
+  override func viewDidLoad() {
         super.viewDidLoad()
         circularSlider.delegate = self
         btReading.layer.cornerRadius = btReading.frame.height/2
+        pagesLabel.text = "\(book?.numberOfPagesRead ?? 0)/\(book?.totalOfPages ?? 0)"
+        pagesText.text = ProgressTextManager.progressText(currentPage: book?.numberOfPagesRead ?? 0, totalPages: book?.totalOfPages ?? 0)
     }
     
     @IBAction func changeTimerValue(_ sender: UISlider) {
