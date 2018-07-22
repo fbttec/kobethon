@@ -22,7 +22,7 @@ class RegisterBookCollectionViewCell: UICollectionViewCell {
         if let readPages = book.numberOfPagesRead,
             let totalPages = book.totalOfPages,
             totalPages > 0 {
-            progressView.setProgress(Float(readPages/totalPages), animated: true)
+            progressView.setProgress( Float(readPages)/Float(totalPages), animated: true)
         }
         self.layer.cornerRadius = 5
         self.backgroundColor = UIColor.white

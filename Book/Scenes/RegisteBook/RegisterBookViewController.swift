@@ -20,11 +20,17 @@ class RegisterBookViewController: UIViewController {
     
     var books: [Book]?
     var selectedBook: Book?
+    var selectedIndex: Int?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         title = "Library"
         navigationItem.rightBarButtonItem = addBarButtonItem
+        
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
         books = DefaultManager.shared.getBooks()
         collectionView.reloadData()
     }
@@ -67,6 +73,7 @@ class RegisterBookViewController: UIViewController {
         if let readingVC = segue.destination as? ReadingViewController,
             segue.identifier == "goToReading" {
             readingVC.book = selectedBook
+            readingVC.index = selectedIndex
         }
     }
     
@@ -76,6 +83,7 @@ extension RegisterBookViewController: UICollectionViewDelegate, UICollectionView
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         selectedBook = books?[indexPath.row]
+        selectedIndex = indexPath.row
         self.performSegue(withIdentifier: "goToReading", sender: nil)
     }
     

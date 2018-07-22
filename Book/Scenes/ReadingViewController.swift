@@ -14,12 +14,13 @@ class ReadingViewController: UIViewController, CircularSliderDelegate {
     @IBOutlet weak var timerLabel: UILabel!
     @IBOutlet weak var startButton: UIButton!
     @IBOutlet weak var imgBook: UIImageView!
-  @IBOutlet weak var pagesText: UILabel!
-  @IBOutlet weak var pagesLabel: UILabel!
+    @IBOutlet weak var pagesText: UILabel!
+    @IBOutlet weak var pagesLabel: UILabel!
     var countdownTimer: Timer?
     var totalTime = 0
     var isReading: Bool = false
     var book: Book?
+    var index: Int?
   
   override func viewDidLoad() {
         super.viewDidLoad()
@@ -57,6 +58,26 @@ class ReadingViewController: UIViewController, CircularSliderDelegate {
         circularSlider.value = 0.0
         timerLabel.text = "\(timeFormatted(totalTime))"
         startButton.setTitle("Start", for: .normal)
+        
+        let alertController = UIAlertController(title: "Total Pages", message: "", preferredStyle: .alert)
+        alertController.addTextField { (textField) in
+            textField.placeholder = "Which book's page did you stop?"
+        }
+        let saveAction = UIAlertAction(title: "Save", style: .default) { (action) in
+            guard let totalTextField = alertController.textFields?[0] else { return }
+            
+            let totalPages = Int(totalTextField.text ?? "0")
+            if var books = DefaultManager.shared.getBooks(),
+                let index = self.index {
+                self.book?.numberOfPagesRead = totalPages
+                books[index] = self.book!
+                DefaultManager.shared.setBooks(books: books)
+            }
+        }
+        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
+        alertController.addAction(saveAction)
+        alertController.addAction(cancelAction)
+        self.present(alertController, animated: true, completion: nil)
     }
     
     func timeFormatted(_ totalSeconds: Int) -> String {

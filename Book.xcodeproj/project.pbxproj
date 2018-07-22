@@ -171,16 +171,8 @@
 				5B1805872103C5A600F48E6D /* Common */,
 				5B1805842103C3AA00F48E6D /* Model */,
 				5B18057F2103C2B200F48E6D /* RegisteBook */,
-				5B18057A2103B39C00F48E6D /* Login */,
 			);
 			path = Scenes;
-			sourceTree = "<group>";
-		};
-		5B18057A2103B39C00F48E6D /* Login */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Login;
 			sourceTree = "<group>";
 		};
 		5B18057F2103C2B200F48E6D /* RegisteBook */ = {
